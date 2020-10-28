@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lee.mapper.DetailMapper">
+    <resultMap id="BaseResultMap" type="com.lee.entity.Detail">
+        <constructor>
+            <idArg column="detail_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="novel_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="chapter_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="chapter_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="words" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+        </constructor>
+    </resultMap>
+    <resultMap id="ResultMapWithBLOBs" type="com.lee.entity.Detail">
+        <constructor>
+            <idArg column="detail_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="novel_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="chapter_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="chapter_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="words" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+            <arg column="content" javaType="java.lang.String" jdbcType="LONGVARCHAR"/>
+        </constructor>
+    </resultMap>
+    <sql id="Example_Where_Clause">
+        <where>
+            <foreach collection="oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" prefixOverrides="and" suffix=")">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach close=")" collection="criterion.value" item="listItem" open="("
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+    <sql id="Update_By_Example_Where_Clause">
+        <where>
+            <foreach collection="example.oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" prefixOverrides="and" suffix=")">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach close=")" collection="criterion.value" item="listItem" open="("
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+    <sql id="Base_Column_List">
+    detail_id, novel_id, chapter_name, sequence_id, words, update_time
+  </sql>
+    <sql id="Blob_Column_List">
+    content
+  </sql>
+    <!-- Detail selectChapterDetailByChapterId(Integer chapterId); -->
+    <select id="selectChapterDetailByChapterId" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+        SELECT * FROM chapter_detail WHERE chapter_id=#{chapterId}
+    </select>
+    <!--  Integer selectNewChapterIdByNovelIdAndChapterIdAndTurn(Integer chapterId,Integer novelId,Integer turn);  -->
+    <select id="selectNewChapterIdByNovelIdAndChapterIdAndTurn" parameterType="java.lang.Integer"
+            resultType="java.lang.Integer">
+        SELECT chapter_id FROM chapter_detail WHERE chapter_id=
+        (SELECT chapter_id FROM chapter WHERE sequence_id=
+        (SELECT sequence_id FROM chapter WHERE chapter_id=#{chapterId})
+        <choose>
+            <when test="turn==0">
+                -1
+            </when>
+            <when test="turn==1">
+                +1
+            </when>
+            <otherwise></otherwise>
+        </choose>
+        AND novel_id=#{novelId})
+    </select>
+    <select id="selectByExampleWithBLOBs" parameterType="com.lee.entity.DetailExample" resultMap="ResultMapWithBLOBs">
+        select
+        <if test="distinct">
+            distinct
+        </if>
+        <include refid="Base_Column_List"/>
+        ,
+        <include refid="Blob_Column_List"/>
+        from chapter_detail
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+        <if test="orderByClause != null">
+            order by ${orderByClause}
+        </if>
+    </select>
+    <select id="selectByExample" parameterType="com.lee.entity.DetailExample" resultMap="BaseResultMap">
+        select
+        <if test="distinct">
+            distinct
+        </if>
+        <include refid="Base_Column_List"/>
+        from chapter_detail
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+        <if test="orderByClause != null">
+            order by ${orderByClause}
+        </if>
+    </select>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+        select
+        <include refid="Base_Column_List"/>
+        ,
+        <include refid="Blob_Column_List"/>
+        from chapter_detail
+        where detail_id = #{detailId,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from chapter_detail
+    where detail_id = #{detailId,jdbcType=INTEGER}
+  </delete>
+    <!--  int deleteByNovelId(Integer novelId);  -->
+    <delete id="deleteByNovelId" parameterType="java.lang.Integer">
+        DELETE FROM chapter_detail WHERE novel_id=#{novelId}
+    </delete>
+    <!--  int deleteDetailByChapterId(Integer chapterId);  -->
+    <delete id="deleteDetailByChapterId" parameterType="java.lang.Integer">
+        DELETE FROM chapter_detail WHERE chapter_id=#{chapterId}
+    </delete>
+    <delete id="deleteByExample" parameterType="com.lee.entity.DetailExample">
+        delete from chapter_detail
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </delete>
+    <insert id="insert" parameterType="com.lee.entity.Detail">
+    insert into chapter_detail (detail_id, novel_id, chapter_name,chapter_id
+      words, update_time,
+      content)
+    values (#{detailId,jdbcType=INTEGER}, #{novelId,jdbcType=INTEGER}, #{chapterName,jdbcType=VARCHAR},
+      #{chapterName,jdbcType=INTEGER}, #{words,jdbcType=INTEGER}, #{updateTime,jdbcType=TIMESTAMP},
+      #{content,jdbcType=LONGVARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.lee.entity.Detail">
+        insert into chapter_detail
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="detailId != null">
+                detail_id,
+            </if>
+            <if test="novelId != null">
+                novel_id,
+            </if>
+            <if test="chapterName != null">
+                chapter_name,
+            </if>
+            <if test="chapterId != null">
+                chapter_id,
+            </if>
+            <if test="words != null">
+                words,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+            <if test="content != null">
+                content,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="detailId != null">
+                #{detailId,jdbcType=INTEGER},
+            </if>
+            <if test="novelId != null">
+                #{novelId,jdbcType=INTEGER},
+            </if>
+            <if test="chapterName != null">
+                #{chapterName,jdbcType=VARCHAR},
+            </if>
+            <if test="chapterId != null">
+                #{chapterId,jdbcType=INTEGER},
+            </if>
+            <if test="words != null">
+                #{words,jdbcType=INTEGER},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="content != null">
+                #{content,jdbcType=LONGVARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <select id="countByExample" parameterType="com.lee.entity.DetailExample" resultType="java.lang.Long">
+        select count(*) from chapter_detail
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </select>
+    <update id="updateByExampleSelective" parameterType="map">
+        update chapter_detail
+        <set>
+            <if test="record.detailId != null">
+                detail_id = #{record.detailId,jdbcType=INTEGER},
+            </if>
+            <if test="record.novelId != null">
+                novel_id = #{record.novelId,jdbcType=INTEGER},
+            </if>
+            <if test="record.chapterName != null">
+                chapter_name = #{record.chapterName,jdbcType=VARCHAR},
+            </if>
+            <if test="record.sequenceId != null">
+                sequence_id = #{record.sequenceId,jdbcType=INTEGER},
+            </if>
+            <if test="record.words != null">
+                words = #{record.words,jdbcType=INTEGER},
+            </if>
+            <if test="record.updateTime != null">
+                update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="record.content != null">
+                content = #{record.content,jdbcType=LONGVARCHAR},
+            </if>
+        </set>
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByExampleWithBLOBs" parameterType="map">
+        update chapter_detail
+        set detail_id = #{record.detailId,jdbcType=INTEGER},
+        novel_id = #{record.novelId,jdbcType=INTEGER},
+        chapter_name = #{record.chapterName,jdbcType=VARCHAR},
+        sequence_id = #{record.sequenceId,jdbcType=INTEGER},
+        words = #{record.words,jdbcType=INTEGER},
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+        content = #{record.content,jdbcType=LONGVARCHAR}
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByExample" parameterType="map">
+        update chapter_detail
+        set detail_id = #{record.detailId,jdbcType=INTEGER},
+        novel_id = #{record.novelId,jdbcType=INTEGER},
+        chapter_name = #{record.chapterName,jdbcType=VARCHAR},
+        sequence_id = #{record.sequenceId,jdbcType=INTEGER},
+        words = #{record.words,jdbcType=INTEGER},
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByPrimaryKeySelective" parameterType="com.lee.entity.Detail">
+        update chapter_detail
+        <set>
+            <if test="novelId != null">
+                novel_id = #{novelId,jdbcType=INTEGER},
+            </if>
+            <if test="chapterName != null">
+                chapter_name = #{chapterName,jdbcType=VARCHAR},
+            </if>
+            <if test="sequenceId != null">
+                sequence_id = #{sequenceId,jdbcType=INTEGER},
+            </if>
+            <if test="words != null">
+                words = #{words,jdbcType=INTEGER},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="content != null">
+                content = #{content,jdbcType=LONGVARCHAR},
+            </if>
+        </set>
+        where detail_id = #{detailId,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.lee.entity.Detail">
+    update chapter_detail
+    set novel_id = #{novelId,jdbcType=INTEGER},
+      chapter_name = #{chapterName,jdbcType=VARCHAR},
+      sequence_id = #{sequenceId,jdbcType=INTEGER},
+      words = #{words,jdbcType=INTEGER},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where detail_id = #{detailId,jdbcType=INTEGER}
+  </update>
+    <update id="updateByPrimaryKey" parameterType="com.lee.entity.Detail">
+    update chapter_detail
+    set novel_id = #{novelId,jdbcType=INTEGER},
+      chapter_name = #{chapterName,jdbcType=VARCHAR},
+      sequence_id = #{sequenceId,jdbcType=INTEGER},
+      words = #{words,jdbcType=INTEGER},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where detail_id = #{detailId,jdbcType=INTEGER}
+  </update>
+</mapper>

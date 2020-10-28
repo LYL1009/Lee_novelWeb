@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <!--是网站搜索引擎了解网页入口，和对网页主题归属的最佳判断点-->
+    <title>全本小说网-好看的小说-免费完结小说排行榜、全部免费</title>
+    <!--网站说明，对关键字的作用明显降低，但由于很多搜索引擎，仍然大量采用网页的meta标签中的
+    描述部分作为搜索结果的内容，就是简要说明网站主要是用来做什么的-->
+    <meta name="description" content="全本小说网转载收集玄幻、穿越、重生、都市、修真、网游、
+    武侠、言情、科幻、灵异、官场等完结小说，并提供好看的完本小说在线全文免费阅读。" />
+    <!--keywords是页面关键词，是搜索引擎关注点之一，keywords应该限制在6-8个关键词左右。电商类网站可以多少许-->
+    <meta name="keywords" content="全本小说,好看的小说,免费小说,免费完结小说,完结小说排行榜">
+    <!--引入facicon.ico网页图标-->
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <!--引入初始化css文件-->
+    <link rel="stylesheet" href="../css/base.css">
+    <!--引入公共样式css文件-->
+    <link rel="stylesheet" href="../css/common.css">
+    <!--引入矢量图-->
+    <link  rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css">
+    <!--引入媒体查询css文件-->
+    <link rel="stylesheet" href="../css/Media_queries.css">
+</head>
+<body>
+<!--header头部-->
+<div class="header">
+    <div class="logo f1">
+        <a href="./index.html" target="_blank">齐书网</a>
+    </div>
+    <div class="search ">
+        <div class="search1 f1">
+            <input type="text" class="text" value="请输入小说名或作者名..." />
+            <button class="btn">搜索</button>
+        </div>
+        <div class="hotwrods f1">
+            <a href="#" target="_blank">斗罗大陆</a>
+            <a href="#" target="_blank">神像鬼医</a>
+            <a href="#" target="_blank">茅山道士</a>
+            <a href="#" target="_blank">仙逆</a>
+            <a href="#" target="_blank">麻衣神相</a>
+            <a href="#" target="_blank">魔道重生</a>
+            <a href="#" target="_blank">修真世界</a>
+        </div>
+    </div>
+    <div class="login f1">
+        <p class="s">
+            <a class="loginhref f1 f2 f3" href="./login.html" target="_blank">登录</a>
+            <a class="register f1 f2 f3" href="./login.html" target="_blank">注册</a>
+        </p>
+    </div>
+</div>
+<!--nav导航栏-->
+<div class="nav">
+    <a href="./index.html" target="_blank">首页</a>
+    <a href="./fantasy.html" target="_blank">玄幻奇幻</a>
+    <a href="./coatard.html" target="_blank">武侠修真</a>
+    <a href="./urbannovels.html" target="_blank">都市重生</a>
+    <a href="./historicalnovel.html" target="_blank">历史军事</a>
+    <a href="./competitivenovel.html" target="_blank">网游竞技</a>
+    <a href="./sciencefiction.html" target="_blank">科幻次元</a>
+    <a href="./ghoststory.html" target="_blank">灵异恐怖</a>
+    <a href="./romanticfiction.html" target="_blank">女生言情</a>
+    <a href="./othernovel.html" target="_blank">其他</a>
+    <a href="./allofthenovel.html" target="_blank">全本</a>
+    <a href="./seniority.html" target="_blank">排行</a>
+    <a href="./allofthenovel.html" target="_blank">书库</a>
+</div>
+<!--导航栏2-->
+<div class="nav2">
+    <div class="nav3">
+        <ul>
+            <li class="nav4"><a href="./allofthenovel.html" >全本小说</a></li>
+            <li class="nav4"><a href="./fantasy.html" >玄幻小说</a></li>
+            <li class="nav4"><a href="./coatard.html">修真小说</a></li>
+            <li class="nav4 "><a href="./urbannovels.html" >都市小说</a></li>
+            <li class="nav4 backgroundcolor"><a href="./historicalnovel.html" >历史小说</a></li>
+            <li class="nav4"><a href="./competitivenovel.html" >网游小说</a></li>
+            <li class="nav4"><a href="./sciencefiction.html" >科幻小说</a></li>
+            <li class="nav4"><a href="./ghoststory.html" >灵异小说</a></li>
+            <li class="nav4"><a href="./romanticfiction.html" >言情小说</a></li>
+            <li class="nav4"><a href="./othernovel.html" >其他小说</a></li>
+        </ul>
+    </div>
+    <div class="allbook">
+        <div class="box">
+            <p class="titles">
+                <b>全本小说网共有小说17931本，汇聚最优秀的海量小说，无限精彩任您挑选。</b>
+                <span class="resetcondition">
+                     <a href="#">清除条件</a>
+                 </span>
+            </p>
+            <div class="filter">
+                <ul>
+                    <li>
+                        <span>排序：</span>
+                        <a class="curr " href="#">默认</a>
+                        <a href="#">总点击</a>
+                        <a href="#">月点击</a>
+                        <a href="#">周点击</a>
+                        <a href="#">日点击</a>
+                        <a href="#">总推荐</a>
+                        <a href="#">月推荐</a>
+                        <a href="#">周推荐</a>
+                        <a href="#">日推荐</a>
+                        <a href="#">总收藏</a>
+                        <a href="#">字数</a>
+                        <a href="#">更新时间</a>
+                    </li>
+                    <li>
+                        <span>字数：</span>
+                        <a class="curr " href="#">全部</a>
+                        <a href="#">30万以下</a>
+                        <a href="#">30万-50万</a>
+                        <a href="#">50万-100万</a>
+                        <a href="#">100万-200万</a>
+                        <a href="#">200万以上</a>
+                    </li>
+                    <li>
+                        <span>状态：</span>
+                        <a class="curr " href="#">不限</a>
+                        <a href="#">连载中</a>
+                        <a href="#">已完本</a>
+                    </li>
+                    <li>
+                        <span>字母：</span>
+                        <a class="curr " href="#">全部</a>
+                        <a href="#">A</a>
+                        <a href="#">B</a>
+                        <a href="#">C</a>
+                        <a href="#">D</a>
+                        <a href="#">E</a>
+                        <a href="#">F</a>
+                        <a href="#">G</a>
+                        <a href="#">H</a>
+                        <a href="#">I</a>
+                        <a href="#">J</a>
+                        <a href="#">K</a>
+                        <a href="#">L</a>
+                        <a href="#">M</a>
+                        <a href="#">N</a>
+                        <a href="#">O</a>
+                        <a href="#">P</a>
+                        <a href="#">Q</a>
+                        <a href="#">R</a>
+                        <a href="#">S</a>
+                        <a href="#">T</a>
+                        <a href="#">U</a>
+                        <a href="#">V</a>
+                        <a href="#">W</a>
+                        <a href="#">X</a>
+                        <a href="#">Y</a>
+                        <a href="#">Z</a>
+                    </li>
+                    <li>
+                        <span>顺序：</span>
+                        <a class="curr " href="#">倒序</a>
+                        <a href="#">正序</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="booklist">
+            <p class="shownumber">当前每页显示16部小说</p>
+            <div class="sitebox" id="frameContent">
+                <ul class="rdc">
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg firstimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">战神吕布</a></span>
+                                    <span class="uploadingtime">20-08-03</span>
+                                </dt>
+                                <dd class="authorname">作者：深幻</dd>
+                                <dd class="synopsis">三国重生之战神吕布小说是作者深幻的作品,情节跌宕起伏、扣人心弦,是一本情节与文笔俱佳的历史小说</dd>
+                                <dd class="thelatestchapter">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第二百章、东西战线（上）</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg secondimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">战场合同工</a></span>
+                                    <span class="uploadingtime">20-08-03</span>
+                                </dt>
+                                <dd class="authorname">作者：勿亦行</dd>
+                                <dd class="synopsis">退伍兵林锐,债台高筑生计艰难,又找不到工作.再一次工作面试失败之后,偶遇一个神秘的中年人,为他提供了一份军事保安公司的合同...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第4694章 秘社的阻截</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg thirdimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">三国重生马孟起</a></span>
+                                    <span class="uploadingtime">20-08-03</span>
+                                </dt>
+                                <dd class="authorname">作者：夏海苍松</dd>
+                                <dd class="synopsis">重生三国马超,会天下群雄..</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第四六二章 交州战事完回返（一五三）</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg fourthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">抗日之暴力军团</a></span>
+                                    <span class="uploadingtime">20-08-03</span>
+                                </dt>
+                                <dd class="authorname">作者：千煌</dd>
+                                <dd class="synopsis">华夏闪电特种部队总教官雷战，重生抗日时期！他的到来，让小鬼子闻风丧胆！他的存在，让小鬼子寝食难安！他的名字，让小鬼子夜不...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第2411章 告诫</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg fifthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">终极兵王</a></span>
+                                    <span class="uploadingtime">20-08-03</span>
+                                </dt>
+                                <dd class="authorname">作者：景博士</dd>
+                                <dd class="synopsis"> 他是令整个世界闻风丧胆的兵之王者!为朋友,他甘愿两肋插刀;为亲人,不惜血溅五步!大隐于市,龙翔于九天之上,携风云之势,一路高...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第0178章 ：藏进女人的洗澡间！</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg sixthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">回到古代</a></span>
+                                    <span class="uploadingtime">20-08-03</span>
+                                </dt>
+                                <dd class="authorname">作者：凌云无忌</dd>
+                                <dd class="synopsis">现代杀手魂穿到金陵商贾世家一个弱智的早产儿身上,得不到家族的认可远走京城却碰上了史上最贪财的皇帝.搞副业、做皇商,肥皂生意巨...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank"> 第453章 心理测试</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg seventhimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">东晋北府一丘八</a></span>
+                                    <span class="uploadingtime">20-08-03</span>
+                                </dt>
+                                <dd class="authorname">作者：指云笑天道1</dd>
+                                <dd class="synopsis">历史的车轮滚过波澜壮阔的三国时代,中原大地迎来了百年未遇的和平,人们都以为盛世即将来临,可谁都没想到,等来的却是一场汉人永远...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第二千二百七十八章 绝世鬼影现城头</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg eighthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">乱晋我为王</a></span>
+                                    <span class="uploadingtime">20-08-23</span>
+                                </dt>
+                                <dd class="authorname">作者：我是三道河</dd>
+                                <dd class="synopsis">穿越到晋朝,玩转血世界;收书圣为徒,传祖逖兵法;金谷园里戏绿珠,三国志前品头足;敢执八王之牛耳,更聚五胡于华内!在这里,阴谋...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第二千四百四十八章 神秘生物（五十）</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg ninthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">大清隐龙</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：心净</dd>
+                                <dd class="synopsis">西历1864年,清同治三年,肖乐天来了,带着改变中华国运的理想来到了这个沉重的时代.遥远的美利坚合众国,刚刚打完南北战争的您...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">4578 老鹰入京</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg tenthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">明王首辅</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：陈证道</dd>
+                                <dd class="synopsis">大明朝正德十二年冬,徐晋穿越到江西上饶县一名穷困潦倒的儒童身上.这一年,史上最胡闹的明朝皇帝朱厚照正在边镇宣府游玩.这一年,...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第1306章 闲王无兵</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg eleventhimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">灵剑尊</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：云天空</dd>
+                                <dd class="synopsis">强者遇袭,重返少年时代,成为当年弱小的废物少主.前世的仇人,今生,绝不会放过!前世的遗憾,今生,一定要弥补!待到灵剑长啸之时…。</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第4588章 感悟天道</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg twelfthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">罗马帝国</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：天河岸边</dd>
+                                <dd class="synopsis">山南高卢，维比斯河。这条一直以来是亚雷提恩和山南高卢之间的界河默默地流淌数百年之久，一直作为高卢人南下侵扰罗马人的见证人，时至今日，它终于迎来第一次罗马人对高卢人的进攻。...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第四十七章 双雄再遇</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg thirteenthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">寻唐</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：枪手1号</dd>
+                                <dd class="synopsis">雄踞东方,傲视世界的盛唐,有着包容天下的广阔胸怀,物产丰富,交通天下,人文荟萃,种族融合,通商通海于四邻远邦,文治武功矜伐于...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第一千一百零八章：效忠谁的问题</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg fourteenthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">大魏影帝</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：庄不周</dd>
+                                <dd class="synopsis">大魏影帝小说是作者庄不周的作品,情节跌宕起伏、扣人心弦,是一本情节与文笔俱佳的历史小说</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第186章 有口难辩</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg fifteenthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">汉末文枭</a></span>
+                                    <span class="uploadingtime">20-08-03</span>
+                                </dt>
+                                <dd class="authorname">作者：李奉先字孔明</dd>
+                                <dd class="synopsis">不幸之人,穿越不祥之夜!这里有道不尽的骨肉亲情,有数不尽的兄弟情义,有诉不完的儿女情长,亦有掺杂着血与泪的沙场争锋!谋士如林...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第九十九章 张纯在行动</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg sixteenthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">唐土万里</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：特别白</dd>
+                                <dd class="synopsis">那年,大唐的军队向西走得很远...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第一百五十八章 最坏的打算</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg seventeenthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">数风流人物</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：瑞根</dd>
+                                <dd class="synopsis">瑞根晚明+红楼半架空历史官场养成文,绝对够味!大周永隆二年.盛世隐忧.四王八公鲜花着锦,文臣武将烈火烹油.内有南北文武党争不...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">635.丁字卷 第一百五十六节 接战</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg eighteenthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">敌后争锋</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：574981</dd>
+                                <dd class="synopsis">地不分南北,人不分老幼,无论何人,皆有守土抗战之责,皆应抱定牺牲一切之决心!一个边防军排长,一个敌后工作队的老八路,两人灵魂...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第173章 决裂前的扩编！（第一更！）</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg nineteenth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">贵公子</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：英年早肥</dd>
+                                <dd class="synopsis">车子开在乡间小路上，正以不要命的方式横冲直撞，车身摇晃得厉害，几次差点撞上一旁的百年老树  「喂，你车子不能开好点吗？」严湍望着后照镜，忍不参考：https://www.yibige.la/91417/</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">本书已完结</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg twentieth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">汉末孤峰</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：汉末孤峰</dd>
+                                <dd class="synopsis">主角王耕因黑拳违规被丢进大海中喂鲨鱼,遇到古战场海市蜃楼,魂穿到汉末名将田晏之子田峻的身上,此时正值公元177年田晏与檀石槐...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第214章 民族的里程碑</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg twentiethfrist" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">当警察</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：黑色语言</dd>
+                                <dd class="synopsis">港岛警察学校学警寝室。虚掩的房门中飘扬出一首粤语老歌……誓要去，入刀山。浩气壮，过千关。豪情无限，男儿傲气。地狱也独来独往返。存心一闯虎豹穴，今朝去几时还。奈何难尽欢千日醉， 此刻相对恨晚。愿与你，尽一杯。聚与散，记心间。毋忘情义，长存傲气。日后再相知未晚…</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第一千三百六十八章 高手的风范</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg twentiethsecnd" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">三国之关平当老大</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：三七开</dd>
+                                <dd class="synopsis">身为蜀汉党,关平自穿越之后,便打算抱刘备大腿,做个正经二世祖,衙内,事事为蜀汉事业考虑,但某一天刘备忽然嗝屁了.关平傻眼了,...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第二百九十七章溜了，溜了</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg twentieththird" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">大汉</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：李瀚</dd>
+                                <dd class="synopsis">悲催穿越,大汉朝寸步难行,从零开始,战兢兢只为活命.与人斗,与天斗,稚子终成利器,王也罢,侯也罢,权势只是枷锁.一介布衣开创...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第311章 簪袅城管警备队</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg twentiethfourth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">我是王公贵</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：青史尽成灰</dd>
+                                <dd class="synopsis">我是王富贵.在大明朝,没有人比我的钱更多,没有人比我的官更大……不过要做这两点,首先就要帮朱厚熜坐上龙椅,要帮他保住自己的亲…</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第290章 朕的命，交给你了</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg twentiethfifth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">无双庶子</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：漫客1</dd>
+                                <dd class="synopsis">李信,平南侯的私生子.母亲病逝,跟随舅公进京寻亲的他,被平南侯府骂作"野种",赶出了家门.于是,这个无家可归的少年人,被活活...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第一百一十章 都可以谈</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg twentiethsixth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">最终战争</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：幽灵的威胁</dd>
+                                <dd class="synopsis">灭世的封印即将解开,本源星球危在旦夕,多元宇宙众位面的巅峰强者联合创造了独立的试炼空间,为了使本源星球上的生命得到进化,摆脱</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第一百三十四章 巨龙天降</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg twentiethseventh" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">许愿系统</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：上善若无水</dd>
+                                <dd class="synopsis">书海阁小说网免费提供上善若无水写的历史军事经典作品万千世界许愿系统,万千世界许愿系统小说免费阅读,万千世界许愿系统最新章节,...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第174章 小坐 （400月票加更）</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg twentietheighth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">大唐孽子</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：南山堂</dd>
+                                <dd class="synopsis">熬了个夜,李宽回到大唐,成为了李世民的二儿子楚王李宽."你说什么,你确定这诗是那个孽子写的?""确认过了吗,这个镜子是那个孽...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第604章 喜笑颜开的勋贵们</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg twentiethninth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">大明最后一个狠人</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：大明第一帅</dd>
+                                <dd class="synopsis">魂穿越到大明最后一个皇太子朱慈烺的身上,以一个狠字贯穿一生. 灭流寇,斩贪官,开海禁,扬国威. 这个太子很凶残,打仗比女...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第920章 欧洲的小洋马</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg thirtieth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">公主我不想加班</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：寅时不睡</dd>
+                                <dd class="synopsis">高武版三国自走棋该怎么下?兵种,职业,羁绊,亮狗牌!陈琛本来只想找个主公干点活,得到庇护后去追求长生之道,可是主公不同意.众...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第八十章 邺城之变，冀州乱局</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg thirtiethfrist" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">医侦朝野</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：沐轶</dd>
+                                <dd class="synopsis">京城大户苏家招穷秀才入赘,只因张半仙说他将来会官居一品.没想到赘婿进门后霉星高照,苏家生意大败亏空,秀才又治病死了人,赔得个...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第159章 真相后的真相</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg thirtiethsecnd" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">紹宋</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：榴弹怕水</dd>
+                                <dd class="synopsis">绍者,一曰继;二曰导.公元1127年,北宋灭亡.旋即,皇九子赵构在万众期待中于商丘登基,继承宋统,改元建炎.然而,三个月内,..</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第二十五章 一笑</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg thirtieththird" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">世子很凶</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：关关公子</dd>
+                                <dd class="synopsis">世如棋,人如子.庙堂尔虞我诈,江湖爱恨情仇,市井喜怒哀乐,无非是一颗颗棋子,在棋盘上串联交织,迸发出的点点火光.昭鸿年间,坊...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第二十章 久别重逢（132/445）</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg thirtiethfourth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">大唐不良人</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：庚新</dd>
+                                <dd class="synopsis">长安，百鬼夜行；洛阳，阴兵借道；公元649年，天可汗驾崩含风殿，战神病故于卧榻上。一代女皇在灵宝寺内落发出家；大唐神探步...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第一百一十六章 抉择</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg thirtiethfifth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">我非痴愚实乃纯良</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：怪诞的表哥</dd>
+                                <dd class="synopsis"> "我叫王笑,不是开玩笑的玩笑." "要我娶公主?别开玩笑,我分明是个痴呆儿啊." "哈?这个王朝都要灭亡了,我还会娶公主...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第498章 围与援</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg thirtiethsixth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">大唐</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：荆柯守</dd>
+                                <dd class="synopsis">夫天地者，万物之逆旅；光阴者，百代之过客。而浮生若梦，为欢几何？
+                                    四顾而杀人，十步不留身，昨晚尚在青山百里处，今朝已观洛水之前，东去不回，饮而歌之，是谓风流
+                                    各人有各人的人生，就算回到大唐双龙的世界，也无需跟随着他们的脚步走，就把他们当成路人甲吧!...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">全本已完结</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg thirtiethseventh" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">三世一兵</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：老哲</dd>
+                                <dd class="synopsis">前世他壮志未酬,身死东瀛,化为一只大鸟要奋力飞回故土.而今生他生于西北终是记忆觉醒,终是奔赴东南,投身戚家军,奋力抗倭.那么...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第112章 商震的一刀</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg thirtietheighth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">造反日常</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：汉风雄烈</dd>
+                                <dd class="synopsis">回到乾隆朝,让自己的意志,充斥整个世界!这是我的时代!</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第三十五章 乾隆三十九年</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg thirtiethninth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">灭宋</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：木允锋</dd>
+                                <dd class="synopsis">这欺人孤儿寡妇得来的天下,这所向皆跪的赵家,还是赶紧亡了吧!一斧在手,天下我有!这是一个斧头狂魔,在宋末砍翻一切不服的故事....</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第三七四章 巫王之怒</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg fortieth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">新帝国</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：:虫虫帅</dd>
+                                <dd class="synopsis"> 刘振明一走进楼房的过道里，房东太太便扭着她那肥硕的身体，像是幽灵般从一边闪了出来。
+                                    过道中，只安装了一盏灯，昏昏暗暗的，房东太太那渗白的脸庞煞是吓人，刘振明差点以为自己碰到鬼了...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第三百四十五章 义军大会</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg fortiethfrist" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">大顺第一谋士</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：宝城</dd>
+                                <dd class="synopsis">分析李自成失败的原因,有一条是他身边的谋士无能:牛金星一介腐儒,无才无谋,心胸狭隘.宋献策江湖术士,蛊惑人心,实则志大才疏,...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第49章 危机四伏</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg fortiethsecnd" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">帝王序列</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：何时秋风悲画扇</dd>
+                                <dd class="synopsis">我,秦始皇,打钱!朱棣:我想当皇帝.刘彻:谁不想当皇帝?别说我欺负人,我让一个卫青,小霍陪你们玩玩,何如?赵昚:大家都是斯文…</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第四十八章 天选之子</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg fortieththird" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">谋涯无痕</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：滴水世界</dd>
+                                <dd class="synopsis">谍涯无痕小说是作者滴水世界的作品,情节跌宕起伏、扣人心弦,是一本情节与文笔俱佳的历史小说...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第八十章 一语点醒梦中人</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg fortiethfourth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">春秋大领主</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：赤虎</dd>
+                                <dd class="synopsis">春秋小领主小说是作者赤虎的作品,情节跌宕起伏、扣人心弦,是一本情节与文笔俱佳的历史小说...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第1010章 线索（完）</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg fortiethfifth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">大唐隐相</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：初·十三</dd>
+                                <dd class="synopsis">“那一年，王忠嗣二十三岁，李嗣业只有十二岁，郭子仪大一些，已是三十岁了。环环、环环只有十岁的样子，李白和老杜也很年轻。玄宗四十岁了，一个大叔级别的人...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第六十章柿子熟了</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg fortiethsixth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">建造盛唐</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：无言不信</dd>
+                                <dd class="synopsis">建筑系的高材生意外来到了贞观后期,成为了李世民的十六弟李元瑷.面对已经展开宏图诗篇时代,李元瑷没有赶上最辉煌的潮流,本着随遇...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第五十六章 香饽饽</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg fortiethseventh" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">巨星</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：七七家d猫猫</dd>
+                                <dd class="synopsis">强劲的鼓点和尖锐的金属声响在震撼着耳膜，宛若一记记重锤没有任何阻碍地直接敲打在心脏之上，贯穿全身的电击能量让肌肉猛地紧缩起来，刺激着心脏缩成了一团，大脑因为缺氧而变成了一片混沌。 ...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">完结感言</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="historicalnovelimg fortietheighth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">一不小心来到远古怎么办</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：星辰玖</dd>
+                                <dd class="synopsis">传说，远古人类力大无穷。 传说，远古异兽能翻江倒海。 传说，远古神话人物飞天遁地，无所不能。 这些都是真的吗？ 一不小心来到远古怎么办？ 荒野求生主播赵昊就遇到了这个问题！ </dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">038 直肠子</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="paging" id="pages"></div>
+        </div>
+    </div>
+</div>
+<!--d底部-->
+<div class="footer">
+    <div class="said">
+        <p>本站所有小说由网友上传，如有侵犯版权，请来站内短信告知，本站立即予以处理。拒绝任何色情小说，一经发现，立即删除。</p>
+        <p>Copyright © 2020 <a href="#" target="_blank">齐书网</a> All Rights Reserved.</p>
+        <p>川ICP备1900032号-1</p>
+    </div>
+</div>
+<!--引入js文件-->
+<script src="../js/stylejs.js"></script>
+</body>
+</html>

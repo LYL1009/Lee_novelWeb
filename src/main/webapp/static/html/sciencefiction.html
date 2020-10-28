@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <!--是网站搜索引擎了解网页入口，和对网页主题归属的最佳判断点-->
+    <title>全本小说网-好看的小说-免费完结小说排行榜、全部免费</title>
+    <!--网站说明，对关键字的作用明显降低，但由于很多搜索引擎，仍然大量采用网页的meta标签中的
+    描述部分作为搜索结果的内容，就是简要说明网站主要是用来做什么的-->
+    <meta name="description" content="全本小说网转载收集玄幻、穿越、重生、都市、修真、网游、
+    武侠、言情、科幻、灵异、官场等完结小说，并提供好看的完本小说在线全文免费阅读。" />
+    <!--keywords是页面关键词，是搜索引擎关注点之一，keywords应该限制在6-8个关键词左右。电商类网站可以多少许-->
+    <meta name="keywords" content="全本小说,好看的小说,免费小说,免费完结小说,完结小说排行榜">
+    <!--引入facicon.ico网页图标-->
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <!--引入初始化css文件-->
+    <link rel="stylesheet" href="../css/base.css">
+    <!--引入公共样式css文件-->
+    <link rel="stylesheet" href="../css/common.css">
+    <!--引入矢量图-->
+    <link  rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css">
+    <!--引入媒体查询css文件-->
+    <link rel="stylesheet" href="../css/Media_queries.css">
+</head>
+<body>
+<!--header头部-->
+<div class="header">
+    <div class="logo f1">
+        <a href="./index.html" target="_blank">齐书网</a>
+    </div>
+    <div class="search ">
+        <div class="search1 f1">
+            <input type="text" class="text" value="请输入小说名或作者名..." />
+            <button class="btn">搜索</button>
+        </div>
+        <div class="hotwrods f1">
+            <a href="#" target="_blank">斗罗大陆</a>
+            <a href="#" target="_blank">神像鬼医</a>
+            <a href="#" target="_blank">茅山道士</a>
+            <a href="#" target="_blank">仙逆</a>
+            <a href="#" target="_blank">麻衣神相</a>
+            <a href="#" target="_blank">魔道重生</a>
+            <a href="#" target="_blank">修真世界</a>
+        </div>
+    </div>
+    <div class="login f1">
+        <p class="s">
+            <a class="loginhref f1 f2 f3" href="./login.html" target="_blank">登录</a>
+            <a class="register f1 f2 f3" href="./login.html" target="_blank">注册</a>
+        </p>
+    </div>
+</div>
+<!--nav导航栏-->
+<div class="nav">
+    <a href="./index.html" target="_blank">首页</a>
+    <a href="./fantasy.html" target="_blank">玄幻奇幻</a>
+    <a href="./coatard.html" target="_blank">武侠修真</a>
+    <a href="./urbannovels.html" target="_blank">都市重生</a>
+    <a href="./historicalnovel.html" target="_blank">历史军事</a>
+    <a href="./competitivenovel.html" target="_blank">网游竞技</a>
+    <a href="./sciencefiction.html" target="_blank">科幻次元</a>
+    <a href="./ghoststory.html" target="_blank">灵异恐怖</a>
+    <a href="./romanticfiction.html" target="_blank">女生言情</a>
+    <a href="./othernovel.html" target="_blank">其他</a>
+    <a href="./allofthenovel.html" target="_blank">全本</a>
+    <a href="./seniority.html" target="_blank">排行</a>
+    <a href="./allofthenovel.html" target="_blank">书库</a>
+</div>
+<!--导航栏2-->
+<div class="nav2">
+    <div class="nav3">
+        <ul>
+            <li class="nav4"><a href="./allofthenovel.html" >全本小说</a></li>
+            <li class="nav4"><a href="./fantasy.html" >玄幻小说</a></li>
+            <li class="nav4"><a href="./coatard.html">修真小说</a></li>
+            <li class="nav4 "><a href="./urbannovels.html" >都市小说</a></li>
+            <li class="nav4"><a href="./historicalnovel.html" >历史小说</a></li>
+            <li class="nav4"><a href="./competitivenovel.html" >网游小说</a></li>
+            <li class="nav4 backgroundcolor"><a href="./sciencefiction.html" >科幻小说</a></li>
+            <li class="nav4"><a href="./ghoststory.html" >灵异小说</a></li>
+            <li class="nav4"><a href="./romanticfiction.html" >言情小说</a></li>
+            <li class="nav4"><a href="./othernovel.html" >其他小说</a></li>
+        </ul>
+    </div>
+    <div class="allbook">
+        <div class="box">
+            <p class="titles">
+                <b>全本小说网共有小说17931本，汇聚最优秀的海量小说，无限精彩任您挑选。</b>
+                <span class="resetcondition">
+                     <a href="#">清除条件</a>
+                 </span>
+            </p>
+            <div class="filter">
+                <ul>
+                    <li>
+                        <span>排序：</span>
+                        <a class="curr " href="#">默认</a>
+                        <a href="#">总点击</a>
+                        <a href="#">月点击</a>
+                        <a href="#">周点击</a>
+                        <a href="#">日点击</a>
+                        <a href="#">总推荐</a>
+                        <a href="#">月推荐</a>
+                        <a href="#">周推荐</a>
+                        <a href="#">日推荐</a>
+                        <a href="#">总收藏</a>
+                        <a href="#">字数</a>
+                        <a href="#">更新时间</a>
+                    </li>
+                    <li>
+                        <span>字数：</span>
+                        <a class="curr " href="#">全部</a>
+                        <a href="#">30万以下</a>
+                        <a href="#">30万-50万</a>
+                        <a href="#">50万-100万</a>
+                        <a href="#">100万-200万</a>
+                        <a href="#">200万以上</a>
+                    </li>
+                    <li>
+                        <span>状态：</span>
+                        <a class="curr " href="#">不限</a>
+                        <a href="#">连载中</a>
+                        <a href="#">已完本</a>
+                    </li>
+                    <li>
+                        <span>字母：</span>
+                        <a class="curr " href="#">全部</a>
+                        <a href="#">A</a>
+                        <a href="#">B</a>
+                        <a href="#">C</a>
+                        <a href="#">D</a>
+                        <a href="#">E</a>
+                        <a href="#">F</a>
+                        <a href="#">G</a>
+                        <a href="#">H</a>
+                        <a href="#">I</a>
+                        <a href="#">J</a>
+                        <a href="#">K</a>
+                        <a href="#">L</a>
+                        <a href="#">M</a>
+                        <a href="#">N</a>
+                        <a href="#">O</a>
+                        <a href="#">P</a>
+                        <a href="#">Q</a>
+                        <a href="#">R</a>
+                        <a href="#">S</a>
+                        <a href="#">T</a>
+                        <a href="#">U</a>
+                        <a href="#">V</a>
+                        <a href="#">W</a>
+                        <a href="#">X</a>
+                        <a href="#">Y</a>
+                        <a href="#">Z</a>
+                    </li>
+                    <li>
+                        <span>顺序：</span>
+                        <a class="curr " href="#">倒序</a>
+                        <a href="#">正序</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="booklist">
+            <p class="shownumber">当前每页显示16部小说</p>
+            <div class="sitebox" id="frameContent">
+                <ul class="rdc">
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg firstimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">末日在线</a></span>
+                                    <span class="uploadingtime">20-08-03</span>
+                                </dt>
+                                <dd class="authorname">作者：朴零</dd>
+                                <dd class="synopsis">关于末日在线： 怪物横行，地球骤变游戏场。是外星人的玩笑，还是宇宙末日？八年挣扎，大仇得报，恐怖魔女重生平行世界，新的人生，截然不同的开始...</dd>
+                                <dd class="thelatestchapter">最新章节：<a class="colores hrefstyles" href="#" target="_blank"> 第94章 重生因果与灵魂天赋</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg secondimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">成神风暴</a></span>
+                                    <span class="uploadingtime">20-08-03</span>
+                                </dt>
+                                <dd class="authorname">作者：衣食无忧</dd>
+                                <dd class="synopsis">白小飞抢红包得抢到了一个时空穿梭器,拥有了穿越无尽时空的能力,然后在成神的道路上越走越远…… 和谐的世界,变得无比疯狂!</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第3092章 甘田镇发生的灭门惨案！</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg thirdimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">机甲破世</a></span>
+                                    <span class="uploadingtime">20-08-03</span>
+                                </dt>
+                                <dd class="authorname">作者：红烧清蒸鱼</dd>
+                                <dd class="synopsis">机甲破世小说是作者红烧清蒸鱼的作品,情节跌宕起伏、扣人心弦,是一本情节与文笔俱佳的科幻小说...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">1457章 拖</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg fourthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">诸天福运</a></span>
+                                    <span class="uploadingtime">20-08-03</span>
+                                </dt>
+                                <dd class="authorname">作者：我叫排云掌</dd>
+                                <dd class="synopsis">公府庶子的强者之路!被限制在后宅只能当小透明怎么破?刚刚到叛逆年纪就被勾着往纨绔上走怎么破?初一成年就被亲爹扔到塞外领地自生...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第三百六十八章 嘴炮犀利</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg fifthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">低维革命</a></span>
+                                    <span class="uploadingtime">20-08-03</span>
+                                </dt>
+                                <dd class="authorname">作者：肥瓜</dd>
+                                <dd class="synopsis"> “我知道，有一双眼睛，正在以我理解不了的方式观察着我们。我知道，有一双手，正在以超越想象的方式操控着我们。我们的思想被改写。...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第404章 内奸</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg sixthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">科技之全球垄断</a></span>
+                                    <span class="uploadingtime">20-08-03</span>
+                                </dt>
+                                <dd class="authorname">作者：昭灵驷玉</dd>
+                                <dd class="synopsis">科技之全球垄断全文阅读由网友提供,《科技之全球垄断》情节跌宕起伏、扣人心弦,是一本情节与文笔俱佳的恐怖科幻小说,小说汇小说网...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第781章枪打出头鸟</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg seventhimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">他和她们的群星</a></span>
+                                    <span class="uploadingtime">20-08-03</span>
+                                </dt>
+                                <dd class="authorname">作者：流血的星辰a</dd>
+                                <dd class="synopsis">这是最好的时代.两大阵营斗而不破,通向"新大陆"的大门已经开启,探索与开拓,勇气和光荣是整个银河的底色.这是最坏的时代.地球...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第二百二十六章 各奔东西</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg eighthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">杜蝉音</a></span>
+                                    <span class="uploadingtime">20-08-23</span>
+                                </dt>
+                                <dd class="authorname">作者：洞庭一扁舟</dd>
+                                <dd class="synopsis">在我们居住的县城里,进入夏天每天都可以听到蝉的声音.蝉又名知了,按我们这里的方言,有的叫唧拉子、有的叫伏嬢子.我们小时候也抓过蝉,它的防范意识不强,很容易被抓......</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第五千四百二十七章 万千大道（完）</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg ninthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">获取黑科技</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：暴走大气球</dd>
+                                <dd class="synopsis">我曾在漫威中抓捕罪犯,惩奸除恶.也曾在哆啦a梦中帮助大雄实现梦想.又或者化身黑衣人,与外星人斗智斗勇.环太平洋、超能陆战队...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第一百七十九章 升级版蛛网发射器！</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg tenthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">天家有娇女</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：皇客</dd>
+                                <dd class="synopsis">天家有娇女小说是作者皇客的作品,情节跌宕起伏、扣人心弦,是一本情节与文笔俱佳的言情小说...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第296章 闺阁好友俞小姐</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg eleventhimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">诸天渡道</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：牛油果</dd>
+                                <dd class="synopsis">【发现秘籍《金像功》(假),是否点化为《金像功》(真)……】 【《金像功》等级max,进阶为《铜人功》……】 【《铜人功…。</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第703章 大唐盛世 （二合一章）</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg twelfthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">碾压诸天</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：燃冷光</dd>
+                                <dd class="synopsis">不可抗拒的外力强制地球进入大宇宙时代.周哲带着神秘笔记本赐予的【绝对领悟】和【自我设定】天赋,开启了碾压诸天之旅!解析宇宙密...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第164章“真魔·哲”的牌面</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg thirteenthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">织梦书</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：宁馨儿1919</dd>
+                                <dd class="synopsis">你可愿做织梦者，补全有情天？织梦者？补天？我连袜子都补不好，更别提补天了……你不是在开玩笑吧？事实证明，这不是玩笑。本作品根据育碧首部古风恋爱视觉互动作品《恋语集：织梦书》...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第十一节 名声</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg fourteenthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">娘子万安</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：云霓</dd>
+                                <dd class="synopsis">贵女周如珺惨死在大牢之中,再睁开眼睛已经变成了傻女顾明珠.对顾明珠来说,报仇并不难,难在她曾答应那些死囚,要让他们赫赫有名的...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第一百四十四章 心事</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg fifteenthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">清穿咸鱼攻略</a></span>
+                                    <span class="uploadingtime">20-08-03</span>
+                                </dt>
+                                <dd class="authorname">作者：尤妮丝</dd>
+                                <dd class="synopsis">宅女林羡余被宫斗app绑定，开启快穿之路，本应智斗嫔妃、攻略帝王，然鹅……看看那些渣得各有特色的渣渣，林羡余表示，争宠是不可能争宠的，她宁可当一条混吃等死的咸鱼！谁敢坏老娘享乐大业，...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank"> 第373章、白眼狼</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg sixteenthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">太凶猛了</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：卧牛真人</dd>
+                                <dd class="synopsis">五十年前，龙城穿越，铁血孤军，高举地球文明战旗，面对异界恐怖狂潮。五十年后，孟超重生，发现自己做贡献就能变强大...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank"> 第三百五十五章 风暴将至</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg seventeenthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">玩家凶猛</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：黑灯夏火</dd>
+                                <dd class="synopsis">这是超越维度的真实游戏，这是诸天万界的激烈竞争，波澜壮阔的史诗神话，离奇曲折的异界幻想，玩家凶猛！...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">正文卷 第七百八十九章 沙漠</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg eighteenthimg" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">万界之旅</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：冬日之阳</dd>
+                                <dd class="synopsis">万界之旅小说是作者冬日之阳的作品,情节跌宕起伏、扣人心弦,是一本情节与文笔俱佳的玄幻小说...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">新书 从封神开始的诸天之旅 求收藏啦</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg nineteenth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">女医青枝</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：苏蓝姑娘</dd>
+                                <dd class="synopsis">女扮男装替父行医的青枝没想到,自己自从给江北第一纨绔陆世康治病并被他识破女子身份后,就惹上了麻烦事.陆:我最好的兄弟不见了,...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第一百六十二章 孔大夫的尴尬事又多了一件</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg twentieth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">生存录</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：不冷的天堂</dd>
+                                <dd class="synopsis"> 一样的末世，不一样的求生之旅. 2o12年12月21日，末世如约而来. 这是一场战斗，不在乎胜负，只在乎生死！ 且看身为宅男的周御龙，如何凭借着电脑里面的恐怖电影系列和《荒野求生》系列带来的知识，在这个肮脏的末世，坚强的活下去. 此书已签约，希望大家多多支持！收藏，红票和捧场，当然是越多越好啦！.....</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第1440章 小卒过河——可当车 下 !</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg twentiethfrist" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">武当开始</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：泡椒炖咸鱼</dd>
+                                <dd class="synopsis">穿越从武当开始小说是作者泡椒炖咸鱼的作品,情节跌宕起伏、扣人心弦,是一本情节与文笔俱佳的科幻小说...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第二十三章.蜀山</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg twentiethsecnd" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">武侠大冒险</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：五方行尽</dd>
+                                <dd class="synopsis">王动在玩一款武侠游戏的时候,穿到了古代,变为了一个江湖帮派弟子.咦!竟然被游戏上了身,可以通过游戏自由出入"金古黄"为主导的...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank"> 第24章 神剑魔刃</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg twentieththird" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">我在时间静止的世界</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：聂履冰</dd>
+                                <dd class="synopsis">书海阁小说网免费提供聂履冰写的科幻未来经典作品我在时间静止的世界,我在时间静止的世界小说免费阅读,我在时间静止的世界最新章节</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第152章 三大美女助手</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg twentiethfourth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">锦戎</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：王微悠令</dd>
+                                <dd class="synopsis">锦戎小说是作者王微悠令的作品,情节跌宕起伏、扣人心弦,是一本情节与文笔俱佳的其他小说……</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第八十四章 挥金如土</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg twentiethfifth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">大笑港影</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：黑色语言</dd>
+                                <dd class="synopsis">大笑港影小说是作者黑色语言的作品,情节跌宕起伏、扣人心弦,是一本情节与文笔俱佳的科幻小说...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第119章 又要请大圣出马</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg twentiethsixth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">无限地球卫士</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：穷四</dd>
+                                <dd class="synopsis">外星人总想侵略地球?经过我允许了吗? 黑衣人里,他是f探员.变形金刚里,他是疯狂驾驶员.复仇者联盟里,他是能跟绿巨人掰腕子...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第623章 佐拉的计划</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg twentiethseventh" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">宿主</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：黑天魔神</dd>
+                                <dd class="synopsis">以细胞形态寄生,选择宿主必须慎重.谁也没有想到文明会在战争中毁灭,我是蛮族,也是人类....</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第四百四七节 消息传开</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg twentietheighth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">倾世贵女</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：肉肉爱吃素</dd>
+                                <dd class="synopsis">林悦上辈子顺风顺水的活到二十五,救了个孩子,便穿越到古代变成了一个屠夫的肥婆!看着那如后世型男一样的男人,林悦表示,这样的男...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第767章 结局（完）</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg twentiethninth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">欢喜苍梧</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：七弦陌</dd>
+                                <dd class="synopsis">"我要拜师.""嗯.""我想要个男人.""嗯?嗯."苍离下巴微扬,老怀欣慰'总算开窍了.'"九重天的男仙能随我挑?""悦,你...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">完结感言（完）</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg thirtieth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">醉欢眠</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：唐优优</dd>
+                                <dd class="synopsis">既然活着就是个阴谋,她只好想尽一切手段,尽快了结自己.---千辛万苦配制出的假死丸,却让小妹截胡.看着躺在棺材里的不是自己,...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第050章 问答</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg thirtiethfrist" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">锦衣春</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：沙漠</dd>
+                                <dd class="synopsis">安忍不动如大地,静虑深密如秘藏!地藏卷轴突现世间,黄金凤凰再临天地,南北争雄,密云重重.深宫诡虞,疆场喋血.以天地为棋盘,众...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">新书【日月风华】已发布！</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg thirtiethsecnd" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">首辅大人</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：言讱</dd>
+                                <dd class="synopsis">我的首辅大人小说是作者言讱的作品,情节跌宕起伏、扣人心弦,是一本情节与文笔俱佳的游戏小说...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">正文 番外七</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg thirtieththird" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">我们全家都是极品</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：悠闲小神</dd>
+                                <dd class="synopsis">别惹我,我全家是极品! 林美依穿到了一本女主种田文里,成了文中女主的极品邻居. 娘是原文里好八卦的嘴碎大妈,到处说女主坏...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">069 奸诈</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg thirtiethfourth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">催妆</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：西子情</dd>
+                                <dd class="synopsis">凌画十三岁敲登闻鼓告御状，舍得一身剐，将当朝太子太傅一族拉下马，救活了整个凌氏，自此闻名京城。后来三年，她重整凌家，牢牢地将凌家攥在了手里，再无人能撼动。...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">正文卷·共49章</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg thirtiethfifth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">鬼眼迷踪</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：朗白</dd>
+                                <dd class="synopsis"> 从医院醒来,阿九发现自己失去了记忆. 失忆不说,紧接着一个自称是他恋人的家伙出现在他的面前. 这位恋人,还是性别...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第4154章 全文完（完）</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg thirtiethsixth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">大清四福晋</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：学弟的学长</dd>
+                                <dd class="synopsis">大清四福晋小说是作者学弟的学长的作品,情节跌宕起伏、扣人心弦,是一本情节与文笔俱佳的言情小说...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第663章 玩养成的弘小昭</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg thirtiethseventh" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">神枪系统</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：雷霆神罚</dd>
+                                <dd class="synopsis">主要讲主角携带CF、孤胆枪手、全球使命等一系列射击游戏系统穿越到类似美国西部牛仔以枪为主的时代!...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第7827章 无上天魔之威！</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg thirtietheighth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">我在鬼界的开荒日常</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：九色凤</dd>
+                                <dd class="synopsis">书海阁小说网免费提供九色凤写的科幻未来经典作品我在鬼界的开荒日常,我在鬼界的开荒日常小说免费阅读,我在鬼界的开荒日常最新章节...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第105章 成功（求推荐！）</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg thirtiethninth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">九霄情梦</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：阮止</dd>
+                                <dd class="synopsis">书海阁小说网免费提供阮止写的古代言情经典作品九霄情梦,九霄情梦小说免费阅读,九霄情梦最新章节,九霄情梦无弹窗免费阅读....</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第900章 过去</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg fortieth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">全职公敌</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：石三</dd>
+                                <dd class="synopsis"> 古老的职业素养和超前的科技威力结合,造就了游走在神秘和科学之间的强大职业者.只不过这些职业者身上,总有这样那样的…</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第七十一章 鬼女异变体</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg fortiethfrist" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">诸天当神棍</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：冬雪华阳</dd>
+                                <dd class="synopsis">书海阁小说网免费提供冬雪华阳写的科幻未来经典作品背靠诸天当神棍,背靠诸天当神棍小说免费阅读,背靠诸天当神棍最新章节,背靠诸天...</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第56章 轻松而灭（求收藏，求支持）</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg fortiethsecnd" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">我在美影世界当神探</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：报告蟹老板</dd>
+                                <dd class="synopsis">书海阁小说网免费提供报告蟹老板写的科幻未来经典作品我在美影世界当神探,我在美影世界当神探小说免费阅读,我在美影世界当神探最新……</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第87章 山雨欲来风满楼</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg fortieththird" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">玉金记</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：只今</dd>
+                                <dd class="synopsis">苏好意：兰台兄，为何你叫所有人名字却从来不叫我名字？是因为我名字不好听么？ 司马兰台：不是。 苏好意：不是？那是为何？你不说我可走了，从此绝交！ 司马兰台：他人之名，出于喉间、发于唇舌，不动心，不留情。子之名，出于心间，依于唇齿，绕于耳畔，牵动肺腑，一唤三叹。我怕泄露心事，所以才不叫。 苏好意：呃……打扰了，
+                                    我还有事…… 司马兰台：话既挑明就不能轻轻揭过了。 苏好意：我为什么要多嘴……</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第15章 公子久怀悬壶志</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg fortiethfourth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">武僧</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：扎药</dd>
+                                <dd class="synopsis">由炼金术师带领的小队为了阻止义人之石的出现而踏上旅程。拯救世界？哦不，那个魔法师只想独吞义人之石的组成部分——贤者之石而已、那个武僧只想给神教找麻烦而已、至于那个炼金术师，保佑他不是自己想成神吧！</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第1010章 全文完结（完）</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg fortiethfifth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">妙手生春</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：弈澜</dd>
+                                <dd class="synopsis">现代不好混啊,到东朝后才发现古代也不好混啊虽说美男有,能谋善断能居家好生活会有,一技在手总能丰衣足食但是咱滴小人生…。。。</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">番外：致永生——最幸福的样子</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg fortiethsixth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">水来娇</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：海芋拟</dd>
+                                <dd class="synopsis">作为水家应有的嫡女,享受的却是庶女的称号和待遇,突然在某一天,水芊芊醒了过来紧紧的握住了拳头,也想通了一件事情,那就是面子最。。。</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第八章 商量</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg fortiethseventh" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">首辅</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：诚仪鲤</dd>
+                                <dd class="synopsis">沈栗意外穿过时空，来之安之，精心打造自己的古代生活。无能顽劣的侯府庶子不断升职加薪，
+                                    当上首辅，出任托孤重臣，走上人生巅峰。 等等，白富美呢？ 嗯，沈栗发现，纵使手握天下权柄，谈笑间樯橹灰飞烟灭，想在这遥远的时空找个三观相符的妻子，养个符合三观的孩子，也是件很不容易的事。。。。</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">第三百八十四章 擅长的事</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="exhibition">
+                        <div class="listimage">
+                            <a class="sciencefictionimg fortietheighth" href="#" target="_blank"></a>
+                        </div>
+                        <div class="listimages">
+                            <dl>
+                                <dt>
+                                    <span class="titlename f4"><a class="colores" href="#" target="_blank">体验卡</a></span>
+                                    <span class="uploadingtime">20-07-23</span>
+                                </dt>
+                                <dd class="authorname">作者：突然想当木匠</dd>
+                                <dd class="synopsis">灾后重建的世界里，这里有觉醒了火系异能、着急上火就开始头顶冒青烟客串烟雾弹的圣母少年，也有觉醒了说人话的酒鬼狐狸，还有不用觉醒异能就能将人催眠的数学老师……</dd>
+                                <dd class="thelatestchapter f4">最新章节：<a class="colores hrefstyles" href="#" target="_blank">402 东部大裂谷</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="paging" id="pages"></div>
+        </div>
+    </div>
+</div>
+<!--d底部-->
+<div class="footer">
+    <div class="said">
+        <p>本站所有小说由网友上传，如有侵犯版权，请来站内短信告知，本站立即予以处理。拒绝任何色情小说，一经发现，立即删除。</p>
+        <p>Copyright © 2020 <a href="#" target="_blank">齐书网</a> All Rights Reserved.</p>
+        <p>川ICP备1900032号-1</p>
+    </div>
+</div>
+<!--引入js文件-->
+<script src="js/stylejs.js"></script>
+</body>
+</html>

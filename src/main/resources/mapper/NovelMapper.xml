@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lee.mapper.NovelMapper">
+    <resultMap id="BaseResultMap" type="com.lee.entity.Novel">
+        <constructor>
+            <idArg column="novel_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="novel_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="author_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="author_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="status" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="type" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+            <arg column="new_chapter" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="introduction" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="novel_views" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="recommend_votes" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="collection" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="release_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+            <arg column="total_words" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="novel_image" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        </constructor>
+    </resultMap>
+    <sql id="Example_Where_Clause">
+        <where>
+            <foreach collection="oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" prefixOverrides="and" suffix=")">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach close=")" collection="criterion.value" item="listItem" open="("
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+    <sql id="Update_By_Example_Where_Clause">
+        <where>
+            <foreach collection="example.oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" prefixOverrides="and" suffix=")">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach close=")" collection="criterion.value" item="listItem" open="("
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+    <sql id="Base_Column_List">
+    novel_id, novel_name, author_name, author_id, status, type, update_time, new_chapter, 
+    introduction, novel_views, recommend_votes, collection, release_time, total_words, 
+    novel_image
+  </sql>
+    <!-- List<Novel> selectNovelsByTopSix(); -->
+    <select id="selectNovelsByTopSix" resultMap="BaseResultMap">
+      SELECT * FROM novel WHERE status=1 LIMIT 0,6
+    </select>
+    <!--  List<Novel> selectCompleteNovelsByTopThirteen();  -->
+    <select id="selectCompleteNovelsByTopThirteen" resultMap="BaseResultMap">
+        SELECT * FROM novel WHERE `status`=1 ORDER BY recommend_votes DESC LIMIT 0,13
+    </select>
+    <!--  Novel selectTypeNovelByTopOne(String type);  -->
+    <select id="selectTypeNovelByTopOne" parameterType="java.lang.String" resultMap="BaseResultMap">
+        SELECT * FROM novel WHERE type=#{type} ORDER BY recommend_votes DESC LIMIT 0,1
+    </select>
+    <!--  List<Novel> selectTypeNovelsByTwoToThirteen(String type);  -->
+    <select id="selectTypeNovelsByTwoToThirteen" parameterType="java.lang.String" resultMap="BaseResultMap">
+        SELECT * FROM novel WHERE type=#{type} ORDER BY recommend_votes DESC LIMIT 0,12
+    </select>
+    <!--  List<Novel> selectNovelsByNew();  -->
+    <select id="selectNovelsByNew" resultMap="BaseResultMap">
+        SELECT * FROM novel ORDER BY release_time DESC LIMIT 0,15
+    </select>
+    <!--  List<Novel> selectNovelsByNewUpdate();  -->
+    <select id="selectNovelsByNewUpdate" resultMap="BaseResultMap">
+        SELECT * FROM novel ORDER BY update_time DESC LIMIT 0,15
+    </select>
+    <!--  List<Novel> selectTypeNovels(String type);  -->
+    <select id="selectTypeNovels" parameterType="java.lang.String" resultMap="BaseResultMap">
+        SELECT * FROM novel WHERE type=#{type}
+    </select>
+    <!--  List<Novel> selectCompleteNovels();  -->
+    <select id="selectCompleteNovels" resultMap="BaseResultMap">
+        SELECT * FROM novel WHERE `status`=1 ORDER BY collection DESC
+    </select>
+    <!--  List<Novel> selectNovelsByViews(Integer num);  -->
+    <select id="selectNovelsByViews" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        SELECT * FROM novel ORDER BY novel_views DESC LIMIT 0,#{num}
+    </select>
+    <!--  List<Novel> selectNovelsByConditions(@Param("type") String type, @Param("tag") String tag,
+          @Param("words") Integer words, @Param("status") Integer status, @Param("is_reverse") Integer is_reverse);  -->
+    <select id="selectNovelsByConditions" parameterType="java.lang.Object" resultMap="BaseResultMap">
+        SELECT * FROM novel WHERE type=#{type}
+        <choose>
+            <when test="words == 1">
+                AND total_words&lt;300000
+            </when>
+            <when test="words == 2">
+                AND total_words&gt;300000 AND total_words&lt;500000
+            </when>
+            <when test="words == 3">
+                AND total_words&gt;500000 AND total_words&lt;1000000
+            </when>
+            <when test="words == 4">
+                AND total_words&gt;1000000 AND total_words&lt;2000000
+            </when>
+            <when test="words == 5">
+                AND total_words&gt;2000000
+            </when>
+            <otherwise></otherwise>
+        </choose>
+        <choose>
+            <when test="status == 1">
+                AND `status`=0
+            </when>
+            <when test="status == 2">
+                AND `status`=1
+            </when>
+            <otherwise></otherwise>
+        </choose>
+        <choose>
+            <when test="tag == '浏览量'">
+                ORDER BY novel_views
+            </when>
+            <when test="tag == '总推荐'">
+                ORDER BY recommend_votes
+            </when>
+            <when test="tag == '总收藏'">
+                ORDER BY collection
+            </when>
+            <when test="tag == '字数'">
+                ORDER BY total_words
+            </when>
+            <when test="tag == '更新时间'">
+                ORDER BY update_time
+            </when>
+            <otherwise>
+                ORDER BY novel_id
+            </otherwise>
+        </choose>
+        <choose>
+            <when test="is_reverse == 0">
+                DESC
+            </when>
+            <when test="is_reverse == 1">
+                ASC
+            </when>
+            <otherwise></otherwise>
+        </choose>
+        ;
+    </select>
+    <!--  List<Novel> selectNovelsByTag(@Param("is_complete") Integer is_complete, @Param("tag") String tag,
+                                  @Param("words") Integer words, @Param("is_reverse") Integer is_reverse);
+          SELECT * FROM novel WHERE `status`=1 AND total_words<300000 ORDER BY novel_id DESC; -->
+    <select id="selectNovelsByTag" parameterType="java.lang.Object" resultMap="BaseResultMap">
+        SELECT * FROM novel WHERE
+        <choose>
+            <when test="is_complete == 1">
+                `status`=0 AND
+            </when>
+            <when test="is_complete == 2">
+                `status`=1 AND
+            </when>
+            <otherwise></otherwise>
+        </choose>
+        <choose>
+            <when test="words == 1">
+                total_words&lt;300000
+            </when>
+            <when test="words == 2">
+                total_words&gt;300000 AND total_words&lt;500000
+            </when>
+            <when test="words == 3">
+                total_words&gt;500000 AND total_words&lt;1000000
+            </when>
+            <when test="words == 4">
+                total_words&gt;1000000 AND total_words&lt;2000000
+            </when>
+            <when test="words == 5">
+                total_words&gt;2000000
+            </when>
+            <otherwise>
+                total_words&gt;0
+            </otherwise>
+        </choose>
+        <choose>
+            <when test="tag == '浏览量'">
+                ORDER BY novel_views
+            </when>
+            <when test="tag == '总推荐'">
+                ORDER BY recommend_votes
+            </when>
+            <when test="tag == '总收藏'">
+                ORDER BY collection
+            </when>
+            <when test="tag == '字数'">
+                ORDER BY total_words
+            </when>
+            <when test="tag == '更新时间'">
+                ORDER BY update_time
+            </when>
+            <otherwise>
+                ORDER BY novel_id
+            </otherwise>
+        </choose>
+        <choose>
+            <when test="is_reverse == 0">
+                DESC
+            </when>
+            <when test="is_reverse == 1">
+                ASC
+            </when>
+            <otherwise></otherwise>
+        </choose>
+        ;
+    </select>
+    <!--  List<Novel> searchNovelsByField(String field);  -->
+    <select id="searchNovelsByField" parameterType="java.lang.String" resultMap="BaseResultMap">
+        SELECT * FROM novel WHERE novel_name LIKE #{field};
+    </select>
+    <!--  Novel selectNovelByNovelId(Integer novelId);  -->
+    <select id="selectNovelByNovelId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        SELECT * FROM novel WHERE novel_id=#{novelId}
+    </select>
+    <!--  List<Novel> selectNovelByAuthorId(Integer authorId);  -->
+    <select id="selectNovelByAuthorId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        SELECT * FROM novel WHERE author_id=#{authorId}
+    </select>
+    <select id="selectByExample" parameterType="com.lee.entity.NovelExample" resultMap="BaseResultMap">
+        select
+        <if test="distinct">
+            distinct
+        </if>
+        <include refid="Base_Column_List"/>
+        from novel
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+        <if test="orderByClause != null">
+            order by ${orderByClause}
+        </if>
+    </select>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from novel
+        where novel_id = #{novelId,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from novel
+    where novel_id = #{novelId,jdbcType=INTEGER}
+  </delete>
+    <delete id="deleteByExample" parameterType="com.lee.entity.NovelExample">
+        delete from novel
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </delete>
+    <insert id="insert" parameterType="com.lee.entity.Novel">
+    insert into novel (novel_id, novel_name, author_name, 
+      author_id, status, type, 
+      update_time, new_chapter, introduction, 
+      novel_views, recommend_votes, collection, 
+      release_time, total_words, novel_image
+      )
+    values (#{novelId,jdbcType=INTEGER}, #{novelName,jdbcType=VARCHAR}, #{authorName,jdbcType=VARCHAR}, 
+      #{authorId,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{newChapter,jdbcType=VARCHAR}, #{introduction,jdbcType=VARCHAR}, 
+      #{novelViews,jdbcType=INTEGER}, #{recommendVotes,jdbcType=INTEGER}, #{collection,jdbcType=INTEGER}, 
+      #{releaseTime,jdbcType=TIMESTAMP}, #{totalWords,jdbcType=INTEGER}, #{novelImage,jdbcType=VARCHAR}
+      )
+  </insert>
+    <insert id="insertSelective" parameterType="com.lee.entity.Novel">
+        insert into novel
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="novelId != null">
+                novel_id,
+            </if>
+            <if test="novelName != null">
+                novel_name,
+            </if>
+            <if test="authorName != null">
+                author_name,
+            </if>
+            <if test="authorId != null">
+                author_id,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="type != null">
+                type,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+            <if test="newChapter != null">
+                new_chapter,
+            </if>
+            <if test="introduction != null">
+                introduction,
+            </if>
+            <if test="novelViews != null">
+                novel_views,
+            </if>
+            <if test="recommendVotes != null">
+                recommend_votes,
+            </if>
+            <if test="collection != null">
+                collection,
+            </if>
+            <if test="releaseTime != null">
+                release_time,
+            </if>
+            <if test="totalWords != null">
+                total_words,
+            </if>
+            <if test="novelImage != null">
+                novel_image,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="novelId != null">
+                #{novelId,jdbcType=INTEGER},
+            </if>
+            <if test="novelName != null">
+                #{novelName,jdbcType=VARCHAR},
+            </if>
+            <if test="authorName != null">
+                #{authorName,jdbcType=VARCHAR},
+            </if>
+            <if test="authorId != null">
+                #{authorId,jdbcType=INTEGER},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=INTEGER},
+            </if>
+            <if test="type != null">
+                #{type,jdbcType=VARCHAR},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="newChapter != null">
+                #{newChapter,jdbcType=VARCHAR},
+            </if>
+            <if test="introduction != null">
+                #{introduction,jdbcType=VARCHAR},
+            </if>
+            <if test="novelViews != null">
+                #{novelViews,jdbcType=INTEGER},
+            </if>
+            <if test="recommendVotes != null">
+                #{recommendVotes,jdbcType=INTEGER},
+            </if>
+            <if test="collection != null">
+                #{collection,jdbcType=INTEGER},
+            </if>
+            <if test="releaseTime != null">
+                #{releaseTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="totalWords != null">
+                #{totalWords,jdbcType=INTEGER},
+            </if>
+            <if test="novelImage != null">
+                #{novelImage,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <select id="countByExample" parameterType="com.lee.entity.NovelExample" resultType="java.lang.Long">
+        select count(*) from novel
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </select>
+    <update id="updateByExampleSelective" parameterType="map">
+        update novel
+        <set>
+            <if test="record.novelId != null">
+                novel_id = #{record.novelId,jdbcType=INTEGER},
+            </if>
+            <if test="record.novelName != null">
+                novel_name = #{record.novelName,jdbcType=VARCHAR},
+            </if>
+            <if test="record.authorName != null">
+                author_name = #{record.authorName,jdbcType=VARCHAR},
+            </if>
+            <if test="record.authorId != null">
+                author_id = #{record.authorId,jdbcType=INTEGER},
+            </if>
+            <if test="record.status != null">
+                status = #{record.status,jdbcType=INTEGER},
+            </if>
+            <if test="record.type != null">
+                type = #{record.type,jdbcType=VARCHAR},
+            </if>
+            <if test="record.updateTime != null">
+                update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="record.newChapter != null">
+                new_chapter = #{record.newChapter,jdbcType=VARCHAR},
+            </if>
+            <if test="record.introduction != null">
+                introduction = #{record.introduction,jdbcType=VARCHAR},
+            </if>
+            <if test="record.novelViews != null">
+                novel_views = #{record.novelViews,jdbcType=INTEGER},
+            </if>
+            <if test="record.recommendVotes != null">
+                recommend_votes = #{record.recommendVotes,jdbcType=INTEGER},
+            </if>
+            <if test="record.collection != null">
+                collection = #{record.collection,jdbcType=INTEGER},
+            </if>
+            <if test="record.releaseTime != null">
+                release_time = #{record.releaseTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="record.totalWords != null">
+                total_words = #{record.totalWords,jdbcType=INTEGER},
+            </if>
+            <if test="record.novelImage != null">
+                novel_image = #{record.novelImage,jdbcType=VARCHAR},
+            </if>
+        </set>
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByExample" parameterType="map">
+        update novel
+        set novel_id = #{record.novelId,jdbcType=INTEGER},
+        novel_name = #{record.novelName,jdbcType=VARCHAR},
+        author_name = #{record.authorName,jdbcType=VARCHAR},
+        author_id = #{record.authorId,jdbcType=INTEGER},
+        status = #{record.status,jdbcType=INTEGER},
+        type = #{record.type,jdbcType=VARCHAR},
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+        new_chapter = #{record.newChapter,jdbcType=VARCHAR},
+        introduction = #{record.introduction,jdbcType=VARCHAR},
+        novel_views = #{record.novelViews,jdbcType=INTEGER},
+        recommend_votes = #{record.recommendVotes,jdbcType=INTEGER},
+        collection = #{record.collection,jdbcType=INTEGER},
+        release_time = #{record.releaseTime,jdbcType=TIMESTAMP},
+        total_words = #{record.totalWords,jdbcType=INTEGER},
+        novel_image = #{record.novelImage,jdbcType=VARCHAR}
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByPrimaryKeySelective" parameterType="com.lee.entity.Novel">
+        update novel
+        <set>
+            <if test="novelName != null">
+                novel_name = #{novelName,jdbcType=VARCHAR},
+            </if>
+            <if test="authorName != null">
+                author_name = #{authorName,jdbcType=VARCHAR},
+            </if>
+            <if test="authorId != null">
+                author_id = #{authorId,jdbcType=INTEGER},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=INTEGER},
+            </if>
+            <if test="type != null">
+                type = #{type,jdbcType=VARCHAR},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="newChapter != null">
+                new_chapter = #{newChapter,jdbcType=VARCHAR},
+            </if>
+            <if test="introduction != null">
+                introduction = #{introduction,jdbcType=VARCHAR},
+            </if>
+            <if test="novelViews != null">
+                novel_views = #{novelViews,jdbcType=INTEGER},
+            </if>
+            <if test="recommendVotes != null">
+                recommend_votes = #{recommendVotes,jdbcType=INTEGER},
+            </if>
+            <if test="collection != null">
+                collection = #{collection,jdbcType=INTEGER},
+            </if>
+            <if test="releaseTime != null">
+                release_time = #{releaseTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="totalWords != null">
+                total_words = #{totalWords,jdbcType=INTEGER},
+            </if>
+            <if test="novelImage != null">
+                novel_image = #{novelImage,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where novel_id = #{novelId,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.lee.entity.Novel">
+    update novel
+    set novel_name = #{novelName,jdbcType=VARCHAR},
+      author_name = #{authorName,jdbcType=VARCHAR},
+      author_id = #{authorId,jdbcType=INTEGER},
+      status = #{status,jdbcType=INTEGER},
+      type = #{type,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      new_chapter = #{newChapter,jdbcType=VARCHAR},
+      introduction = #{introduction,jdbcType=VARCHAR},
+      novel_views = #{novelViews,jdbcType=INTEGER},
+      recommend_votes = #{recommendVotes,jdbcType=INTEGER},
+      collection = #{collection,jdbcType=INTEGER},
+      release_time = #{releaseTime,jdbcType=TIMESTAMP},
+      total_words = #{totalWords,jdbcType=INTEGER},
+      novel_image = #{novelImage,jdbcType=VARCHAR}
+    where novel_id = #{novelId,jdbcType=INTEGER}
+  </update>
+</mapper>
